@@ -1,155 +1,124 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
 
-    background-color: purple;
-}
-.header{
-    width: 100%;
-    /* border: 1px solid blue; */
-    height: 70px;
-    display: flex;
-    align-items: center;
-    background-color: rgb(101, 5, 101);
+.header {
+  width: 100%;
+  border: 1px solid blue;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: black;
 }
 
 header img {
-    margin-left: 20px;
-    width: 233px;
-    height: 50px;
-
-    
-  }
-
-.header nav{
-    width: 50%;
-    margin-left: 90px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-
-}
-.header nav div ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 100%;
-
-
+  margin-left: 20px;
+  width: 233px;
+  height: 50px;
 }
 
-.Games_Collection{
-
-    height: 500px;
-    background-color: rgb(30, 4, 30);
-    display:flex;
-    color:white;
-    text-align:center;
+.header nav {
+  width: 50%;
+  margin-left: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+.header nav div ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
 }
 
-.Card{
-    margin-left:20px;
-    border:2px solid white;
-    border-radius:5px;
-    width:275px;
-    height:auto;
-    background-color: rgb(54, 19, 59);
-
+.header nav div ul li {
+  padding: 10px 36px;
+  /* background-color: rgb(84, 9, 84); */
 }
 
-.header nav div ul li{
-    padding: 10px 36px;
-    /* background-color: rgb(84, 9, 84); */
+.header nav div ul li:hover {
+  background-color: rgb(173, 28, 173);
+
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
-.header nav div ul li:hover{
-    background-color: rgb(173, 28, 173);
-    
-    transition: 0.4s ease-in-out;
-    cursor: pointer;
+.header nav div ul li a {
+  font-family: "Prompt", serif;
+  font-weight: 600;
+  font-style: normal;
+
+  text-decoration: none;
+}
+main {
+  height: calc(100vh - 70px);
 }
 
-
-.header nav div ul li a{
-    font-family: "Prompt", serif;
-    font-weight: 600;
-    font-style:normal;
-    color: white;
-    text-decoration: none;
-}
-main{
-    display:flex;
-    height: calc(100vh - 70px);
-    background-color: rgb(50, 20, 55);
-    
+main .wrapper {
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
 }
 
-.pa{
-    height:540px;
-    display:flex;
-    align-items:center;
-    font-size: 20px;
-    color: white;
-    font-family: "Prompt", serif;
-    font-weight: 600;
-
-
+main .wrapper .hero-img {
+  width: 50%;
+  border: 2px solid rgb(57, 146, 105);
+  margin-right: auto;
+  margin-left: auto;
+}
+main .wrapper .hero-img img {
 }
 
-main div{
-    
-    justify-content: center;
-    align-content: middle;
-    
-    width:100%;
-    height:fit-content;
-}
-main div img{
-    width:710px;
-    height:540px;
+main .wrapper .text-content {
+  width: 35%;
+
+  border: 1px solid rgb(87, 59, 59);
 }
 
-main h1{
-    margin-top:5px;
-    text-align:center;
-    font-family:sans-serif;
-    color: white;
-    font-weight: 500;
-    font-style: normal;
+main .wrapper .text-content h1 {
+  font-size: 50px;
 }
-footer{
-    background-color: purple;
+
+footer {
+  background-color: purple;
 }
-.socialIcons{
-    display:flex;
-    justify-content: center;
-
-
+.socialIcons {
+  display: flex;
+  justify-content: center;
 }
-.socialIcons a{
-    text-decoration:none;
-    padding:10px;
-    background-color: white;
-    margin:10px;
-    border-radius: 50%;
-
-
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
 }
-.socialIcons a i{
-    font-size: 2em;
-    color: rgb(60, 13, 76);
-    opacity: 0.9;
-
+.socialIcons a i {
+  font-size: 2em;
+  color: rgb(60, 13, 76);
+  opacity: 0.9;
 }
-.footerBottom{
-    color:whitesmoke;
-    display:flex;
-    justify-self: center;
+.footerBottom {
+  color: whitesmoke;
+  display: flex;
+  justify-self: center;
+}
 
+.Games_Collection {
+  height: 500px;
+  display: flex;
+  color: white;
+  text-align: center;
+}
+
+.Card {
+  margin-left: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 275px;
+  height: auto;
 }
