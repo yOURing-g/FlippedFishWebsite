@@ -2,15 +2,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+  scrollbar-width: none;
 
+  
+}
+main{
+  background-color: #FFD000;
+
+}
+header{
+  color: #FFD000;
+
+}
 .header {
   width: 100%;
-  border: 1px solid blue;
-  height: 70px;
+  height: 75px;
   display: flex;
   align-items: center;
   color: black;
+  background-color: black;
 }
 
 header img {
@@ -22,11 +32,12 @@ header img {
 .header nav {
   width: 50%;
   margin-left: 90px;
-  height: 60px;
+  height: 75px;
   display: flex;
   align-items: center;
   display: flex;
   margin-left: auto;
+
 }
 .header nav div ul {
   display: flex;
@@ -41,7 +52,7 @@ header img {
 }
 
 .header nav div ul li:hover {
-  background-color: rgb(173, 28, 173);
+  background-color: #FFAA00;
 
   transition: 0.4s ease-in-out;
   cursor: pointer;
@@ -51,44 +62,140 @@ header img {
   font-family: "Prompt", serif;
   font-weight: 600;
   font-style: normal;
-
+  color: white;
   text-decoration: none;
 }
 main {
-  height: calc(100vh - 70px);
+  height: 560px;
+  border:0.0001px solid black;
+  
 }
 
 main .wrapper {
   width: 100%;
-  border: 1px solid blue;
+  background-color: #FFC300;
   display: flex;
 }
 
 main .wrapper .hero-img {
-  width: 50%;
-  border: 2px solid rgb(57, 146, 105);
+  width: calc(100% / 800px);
+  height:calc(100% / 440px);
+  /* border: 2px solid rgb(57, 146, 105); */
   margin-right: auto;
   margin-left: auto;
+ 
+  
 }
-main .wrapper .hero-img img {
+.sliderWrapper{
+  position:relative;
+  max-width:48rem;
+  height:440px;
+  margin: 0 auto;
+  
+}
+.slider{
+  display:flex;
+  aspect-ratio: 4/3;
+  overflow-x:auto;
+  background-color: #FFC300;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height:440px;
+  /* box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25); */
+
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit:contain;
+  background-position-y: top;
+}
+
+.sliderNav{
+  display:flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:1;
+}
+
+.sliderNav a{
+  scroll-snap-stop:always;
+  width:0.8rem;
+  height: 0.8rem;
+  border-radius:50%;
+  background-color:#ffffff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.sliderNav a :hover{
+  
+  opacity:1;
 }
 
 main .wrapper .text-content {
   width: 35%;
+ 
 
-  border: 1px solid rgb(87, 59, 59);
+  /* border: 1px solid rgb(87, 59, 59); */
 }
 
 main .wrapper .text-content h1 {
-  font-size: 50px;
+  color:white;
+  
+  font-size: 40px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 900px;
+  font-style: normal;
+
+
+}
+main .wrapper .text-content p{
+  color:rgb(0, 0, 0);
+  text-align:center;
+  font-size: 20px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 100px;
+  font-style: normal;
+
+
+}
+main .ArtSub{
+  height:100px;
+  display:flex;
+  text-align: middle;
+  justify-content:center;
+  column-gap: 1px;
+
 }
 
+main .ArtSub img{
+  margin-top:5px;
+ 
+ 
+  height:20px;
+  width:20px;
+  
+}
+
+
+
+
+
 footer {
-  background-color: purple;
+  background-color: black;
 }
 .socialIcons {
   display: flex;
   justify-content: center;
+}
+.socialIcons img{
+  margin-top:2px;
 }
 .socialIcons a {
   text-decoration: none;
@@ -109,16 +216,40 @@ footer {
 }
 
 .Games_Collection {
-  height: 500px;
   display: flex;
-  color: white;
+  color: rgb(180, 69, 69);
   text-align: center;
+  width: 100%;
+  margin-top: 100px;
+  justify-content: space-around;
+
 }
+.Games_Collection a{
+  text-decoration: none;  
+
+}
+
 
 .Card {
   margin-left: 20px;
-  border: 2px solid white;
+  background-color:#dedede;
   border-radius: 5px;
   width: 275px;
-  height: auto;
+  color: #000;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.IconsD{
+padding-top: 10px;
+padding-bottom: 10px;
+display: flex;
+justify-content: space-around;
+}
+.Card .card-img{
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.divider{
+  width: 100%;
+  border: 1px solid black;
 }
