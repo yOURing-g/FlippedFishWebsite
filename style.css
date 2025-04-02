@@ -7,7 +7,7 @@
   
 }
 main{
-  background-color: #FFD000;
+  background-color: #e4e4e4;
 
 }
 header{
@@ -20,7 +20,7 @@ header{
   display: flex;
   align-items: center;
   color: black;
-  background-color: black;
+  background-color: #242134;
 }
 
 header img {
@@ -66,15 +66,25 @@ header img {
   text-decoration: none;
 }
 main {
-  height: 560px;
+  height:550px;
+  padding-bottom:5px;
   border:0.0001px solid black;
   
 }
 
 main .wrapper {
   width: 100%;
-  background-color: #FFC300;
+  background-color: #b3a8a8;
+
   display: flex;
+}
+main .wrapper ul{
+
+  padding-left:5px;
+}
+main .wrapper ul li{
+  
+  padding:5px;
 }
 
 main .wrapper .hero-img {
@@ -97,7 +107,7 @@ main .wrapper .hero-img {
   display:flex;
   aspect-ratio: 4/3;
   overflow-x:auto;
-  background-color: #FFC300;
+  background-color: #988f8f;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -155,6 +165,9 @@ main .wrapper .text-content h1 {
 
 
 }
+.PadTxt{
+  padding-left:20px;
+}
 main .wrapper .text-content p{
   color:rgb(0, 0, 0);
   text-align:center;
@@ -188,7 +201,7 @@ main .ArtSub img{
 
 
 footer {
-  background-color: black;
+  background-color: #181623;
 }
 .socialIcons {
   display: flex;
@@ -206,7 +219,7 @@ footer {
 }
 .socialIcons a i {
   font-size: 2em;
-  color: rgb(60, 13, 76);
+  color: #181623;
   opacity: 0.9;
 }
 .footerBottom {
@@ -220,7 +233,7 @@ footer {
   color: rgb(180, 69, 69);
   text-align: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 20px;
   justify-content: space-around;
 
 }
