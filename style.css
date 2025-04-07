@@ -6,7 +6,7 @@
 
   
 }
-main{
+.main{
   background-color: #e4e4e4;
 
 }
@@ -65,29 +65,29 @@ header img {
   color: white;
   text-decoration: none;
 }
-main {
-  height:550px;
+.main {
+  /* height:550px; */
   padding-bottom:5px;
   border:0.0001px solid black;
   
+  height: calc(100vh - 75px);
 }
 
-main .wrapper {
+.main .wrapper {
   width: 100%;
   background-color: #b3a8a8;
-
   display: flex;
 }
-main .wrapper ul{
+.main .wrapper ul{
 
   padding-left:5px;
 }
-main .wrapper ul li{
+.main .wrapper ul li{
   
   padding:5px;
 }
 
-main .wrapper .hero-img {
+.main .wrapper .hero-img {
   width: calc(100% / 800px);
   height:calc(100% / 440px);
   /* border: 2px solid rgb(57, 146, 105); */
@@ -148,14 +148,14 @@ main .wrapper .hero-img {
   opacity:1;
 }
 
-main .wrapper .text-content {
+.main .wrapper .text-content {
   width: 35%;
  
 
   /* border: 1px solid rgb(87, 59, 59); */
 }
 
-main .wrapper .text-content h1 {
+.main .wrapper .text-content h1 {
   color:white;
   
   font-size: 40px;
@@ -168,7 +168,7 @@ main .wrapper .text-content h1 {
 .PadTxt{
   padding-left:20px;
 }
-main .wrapper .text-content p{
+.main .wrapper .text-content p{
   color:rgb(0, 0, 0);
   text-align:center;
   font-size: 20px;
@@ -178,7 +178,7 @@ main .wrapper .text-content p{
 
 
 }
-main .ArtSub{
+.main .ArtSub{
   height:100px;
   display:flex;
   text-align: middle;
@@ -187,7 +187,7 @@ main .ArtSub{
 
 }
 
-main .ArtSub img{
+.main .ArtSub img{
   margin-top:5px;
  
  
