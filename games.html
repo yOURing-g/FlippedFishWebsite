@@ -3,18 +3,642 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flipped Fish - Explore unique video games, original art, and captivating stories from our indie game development studio." />
+    <meta name="keywords" content="indie games, game development, digital art, storytelling" />
+    <title>Flipped Fish - Indie Game Development Studio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="assets/offf flipped fish.ico">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
 
-<title>Flipped Fish Official Website</title>
+    <link rel="icon" type="image/x-icon" href="assets/offf flipped fish.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Bona+Nova+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+
+       
+        --text-color: #333;
+        --dark-color: #1a1a1a;
+        --success-color: #2ecc71;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+      
+      ul {
+        list-style: none;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+
+      /* Hero Section */
+      .hero-wrapper {
+        background: linear-gradient(135deg, #e9ecef 0%, #d4d8dd 100%);
+        padding: 80px 0;
+        /* background: url("/assets/our_games.webp"); */
+        /* color: white; */
+      }
+      
+      .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      
+      .hero-text {
+        flex: 1;
+        max-width: 600px;
+      }
+      
+      .hero-title {
+        font-family: 'Bona Nova SC', serif;
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      
+      .highlight {
+        color: var(--primary-color);
+        position: relative;
+        display: inline-block;
+      }
+      
+      .highlight::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--primary-color);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+      
+      .highlight:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 300;
+      }
+      
+      .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+      
+      .features-section {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      
+      .features-section h5 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+      
+      .features-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        font-size: 1rem;
+      }
+      
+      .features-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .feature-icon {
+        font-size: 1.5rem;
+      }
+      
+      .hero-cta {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      
+      .cta-button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        text-align: center;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      
+      .cta-button:first-child {
+        background-color: var(--primary-color);
+        color: white;
+      }
+      
+      .cta-button:first-child:hover {
+        background-color: #e67000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .cta-button.secondary {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      
+      .cta-button.secondary:hover {
+        background-color: white;
+        color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .hero-image {
+        flex: 1;
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        background: url("assets/our_games.webp");
+        background-position: center;
+        background-size: cover;
+      }
+      
+      .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+        z-index: 1;
+      }
+      
+      .img-cont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/game-collage.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: transform 10s ease;
+      }
+      
+      .hero-image:hover .img-cont {
+        transform: scale(1.1);
+      }
+      
+      /* Banner Section */
+      .banner-section {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+        color: white;
+      }
+      
+      .banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      .banner-content i {
+        font-size: 1.5rem;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      
+      .banner-content p {
+        font-weight: 500;
+      }
+      
+      .banner-link {
+        color: white;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      
+      .banner-link:hover {
+        color: var(--light-color);
+      }
+      
+      /* Art Submission Section */
+      .art-submission-section {
+        padding: 60px 0;
+        background-color: var(--light-color);
+      }
+      
+      .art-submission {
+        background: linear-gradient(145deg, #ffffff, #f3f4f6);
+        border-radius: var(--border-radius);
+        padding: 30px;
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        max-width: 600px;
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .art-submission:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .art-submission h3 {
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      
+      .art-submission p {
+        color: var(--text-color);
+        margin-bottom: 20px;
+      }
+      
+      .email-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+      .email-container img {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .email-link {
+        color: var(--accent-color);
+        font-weight: 500;
+        transition: var(--transition);
+      }
+      
+      .email-link:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+      
+      /* Featured Games Section */
+      .featured-games {
+        padding: 60px 0;
+        background-color: #f5f7fa;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--secondary-color);
+        font-family: 'Prompt', sans-serif;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+      
+      .game-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+      }
+      
+      .game-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+      
+      .game-image {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      .game-info {
+        padding: 20px;
+      }
+      
+      .game-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+      }
+      
+      .game-description {
+        color: var(--text-color);
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+      
+      .game-link {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      
+      .game-link:hover {
+        text-decoration: underline;
+      }
+      
+      /* Newsletter Section */
+      .newsletter {
+        background-color: var(--secondary-color);
+        padding: 60px 0;
+        color: white;
+      }
+      
+      .newsletter-content {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      .newsletter h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      
+      .newsletter p {
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+      
+      .newsletter-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .newsletter-input {
+        flex: 1;
+        min-width: 300px;
+        padding: 14px;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+      }
+      
+      .newsletter-button {
+        padding: 14px 25px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-weight: 600;
+        transition: var(--transition);
+      }
+      
+      .newsletter-button:hover {
+        background-color: #e67000;
+      }
+      
+      /* Footer */
+      footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 40px 0 20px;
+      }
+      
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .footer-logo {
+        margin-bottom: 30px;
+      }
+      
+      .footer-logo img {
+        height: 50px;
+      }
+      
+      .social-icons {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      
+      .social-icons a {
+        color: white;
+        font-size: 1.8rem;
+        transition: var(--transition);
+      }
+      
+      .social-icons a:hover {
+        color: var(--primary-color);
+        transform: translateY(-5px);
+      }
+      
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+      
+      .footer-nav a {
+        color: #a0aec0;
+        transition: var(--transition);
+      }
+      
+      .footer-nav a:hover {
+        color: white;
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+      }
+      
+      .footer-bottom p {
+        font-size: 0.9rem;
+        color: #a0aec0;
+      }
+      
+      .designer {
+        color: white;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .hero-content {
+          flex-direction: column;
+        }
+        
+        .hero-text {
+          max-width: 100%;
+        }
+        
+        .hero-image {
+          width: 100%;
+        }
+        
+        .features-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .header {
+          padding: 15px;
+        }
+        
+        .mobile-menu-toggle {
+          display: block;
+        }
+        
+        nav ul {
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          flex-direction: column;
+          background-color: var(--light-color);
+          padding: 20px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          transform: translateY(-200%);
+          transition: transform 0.3s ease;
+          z-index: 100;
+        }
+        
+        nav ul.show {
+          transform: translateY(0);
+        }
+        
+        nav li {
+          width: 100%;
+        }
+        
+        nav li a {
+          display: block;
+          padding: 15px;
+          text-align: center;
+        }
+        
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+        
+        .features-list {
+          grid-template-columns: 1fr;
+        }
+        
+        .art-submission {
+          padding: 20px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .hero-wrapper {
+          padding: 40px 0;
+        }
+        
+        .hero-title {
+          font-size: 2rem;
+        }
+        
+        .banner-content {
+          flex-direction: column;
+          text-align: center;
+          padding: 0 20px;
+        }
+        
+        .hero-cta {
+          flex-direction: column;
+        }
+        
+        .cta-button {
+          width: 100%;
+        }
+        
+        .footer-nav {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -42,49 +666,197 @@
       </nav>
     </header>
 
-    <main class="main">
-      <div class="Games_Collection">
-        <a href="https://flippedfish.itch.io/the-hog-game" target="_blank">
-            <div class="Card">
-                <div class="ImgHdP">
-                <img class="card-img" src="assets/Game Assets/hog (2).png" alt="hog" width="275px" height="275px">
-                <h1 style="margin-bottom: 10px;">Hog the Game</h1>
-                <p style="margin-bottom: 10px;">
-                    Hog the Game (Demo) is a game where you help the main character 'Hog' get some legs 
-                    becuase he dosent have any 😢.
-                </p>
-                </div>
-                <div class="divider"></div>
-                <div class = "IconsD">
-                    <i class="fa-brands fa-itch-io"></i>
-                    <i class="fa-brands fa-windows"></i>
-                    <i class="fa-solid fa-laptop"></i>
-                </div>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-wrapper">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Welcome to <span class="highlight">Flipped Fish</span></h1>
+              <div class="hero-subtitle">Dive into a world of creativity and imagination</div>
+              <p class="hero-description">Here you'll find our unique games, original art, and captivating stories created with passion and dedication.</p>
+              
+              <div class="features-section">
+                <h5>Explore Our World</h5>
+                <ul class="features-list">
+                  <li><span class="feature-icon">🎮</span> Unique Video Games</li>
+                  <li><span class="feature-icon">🎨</span> Original Art Work</li>
+                  <li><span class="feature-icon">📝</span> Captivating Stories</li>
+                  <li><span class="feature-icon">ℹ️</span> Our Creative Journey</li>
+                  <li><span class="feature-icon">📰</span> Latest Updates</li>
+                </ul>
+              </div>
+              
+              <!-- <div class="hero-cta">
+                <a href="games.html" class="cta-button">Explore Games</a>
+                <a href="#" class="cta-button secondary">Read Stories</a>
+              </div> -->
             </div>
-        </a>
-        
-    </div>
-        
+            
+            <div class="hero-image">
+              <div class="img-overlay"></div>
+              <div class="img-cont"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Banner Section -->
+      <section class="banner-section">
+        <div class="container">
+          <div class="banner-content">
+            <i class="fa-solid fa-bullhorn"></i>
+            <p>Check out our latest game release - "Upside Down Adventures"!</p>
+            <a href="#" class="banner-link">Learn More</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Featured Games Section -->
+      <section class="featured-games">
+        <div class="container">
+          <h2 class="section-title">Featured Games</h2>
+          <div class="games-grid">
+            <div class="game-card">
+              <img src="/assets/game_1.webp" alt="Upside Down Adventures" class="game-image" />
+              <div class="game-info">
+                <h3 class="game-title">Upside Down Adventures</h3>
+                <p class="game-description">Navigate through a world where gravity is constantly changing. Can you solve the puzzles and find your way home?</p>
+                <a href="#" class="game-link">Play Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="game-card">
+              <img src="/assets/game_2.webp" alt="Oceanic Mysteries" class="game-image" />
+              <div class="game-info">
+                <h3 class="game-title">Oceanic Mysteries</h3>
+                <p class="game-description">Explore the depths of the ocean and discover the secrets hidden beneath the waves in this underwater adventure.</p>
+                <a href="#" class="game-link">Play Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="game-card">
+              <img src="/assets/game_3.webp" alt="Pixel Dreamland" class="game-image" />
+              <div class="game-info">
+                <h3 class="game-title">Pixel Dreamland</h3>
+                <p class="game-description">A retro-style platformer with a modern twist. Jump, dodge, and collect your way through colorful pixelated worlds.</p>
+                <a href="#" class="game-link">Play Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="game-card">
+              <img src="/assets/game_4.webp" alt="Pixel Dreamland" class="game-image" />
+              <div class="game-info">
+                <h3 class="game-title">Pixel Dreamland</h3>
+                <p class="game-description">A retro-style platformer with a modern twist. Jump, dodge, and collect your way through colorful pixelated worlds.</p>
+                <a href="#" class="game-link">Play Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Art Submission Section -->
+      <section class="art-submission-section">
+        <div class="container">
+          <div class="art-submission">
+            <h3>Submit Your Artwork</h3>
+            <p>Join our creative community! Send us your art and get a chance to be featured on our homepage and social media platforms.</p>
+            <div class="email-container">
+              <img src="assets/mailicon.png" alt="Mail icon" />
+              <a href="mailto:flippedfish.inc@gmail.com" class="email-link">flippedfish.inc@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter to receive updates about new games, art features, and upcoming events.</p>
+            <form class="newsletter-form" action="#" method="POST">
+              <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address">
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     
     <footer>
-      <div class="footerContainer">
-        <div class="socialIcons">
-          <img src="assets/flipped fish name.png" alt="flippedfish" />
-          <a href="https://flippedfish.itch.io" target="_blank" title="Find us on Itch.io">
-            <i class="fa-brands fa-itch-io"></i>
-          </a>
-          <a href="https://steamcommunity.com/profiles/76561199796109900/" target="_blank" title="Find us on Steam">
-            <i class="fa-brands fa-steam"></i>
-          </a>
-        </div>
-        <div class="footerBottom">
-          <p>
-            Copyright &copy;2025; Designed by
-            <span class="designer">Hezron Robinson</span>
-          </p>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="assets/flipped fish name.png" alt="Flipped Fish Logo" />
+          </div>
+          
+          <div class="social-icons">
+            <a href="https://flippedfish.itch.io" target="_blank" title="Find us on Itch.io">
+              <i class="fa-brands fa-itch-io"></i>
+            </a>
+            <a href="#" target="_blank" title="Find us on Steam">
+              <i class="fa-brands fa-steam"></i>
+            </a>
+            <a href="#" target="_blank" title="Follow us on Twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" title="Join our Discord">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </div>
+          
+          <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="games.html">Games</a>
+            <a href="#">Stories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>
+              &copy; 2025 Flipped Fish. All rights reserved. Designed by
+              <span class="designer">Hezron Robinson</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (mobileMenuToggle && navMenu) {
+          mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+          });
+        }
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        
+        // Observe elements that should animate
+        document.querySelectorAll('.game-card, .art-submission').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
