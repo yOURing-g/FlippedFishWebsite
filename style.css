@@ -6,6 +6,7 @@
 }
 
 :root {
+  
   --primary-color: #242134;
   --secondary-color: #f56b45;
   --accent-color: #ffaa00;
@@ -507,6 +508,12 @@ footer {
   color: var(--accent-color);
   font-weight: 600;
 }
+
+
+
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
