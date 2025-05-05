@@ -21,30 +21,72 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #121212;
+      background-color: #d8ca5a;
       color: #ffffff;
       margin: 0;
       padding: 0;
     }
-    header {
+    /* header {
       background-color: #1f1f1f;
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #ff6f61;
-    }
-    header h1 {
+    } */
+    .Top{
       margin: 0;
-      font-size: 2.5em;
-      color: #ff6f61;
+      height:90px;
+      font-size: 1.5em;
+      color: #000000;
+      background-color: rgb(64, 6, 83);
+      display:flex;
+      justify-content: center;
     }
     .news-container {
       max-width: 900px;
       margin: 30px auto;
       padding: 0 20px;
     }
+    .banner-section {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+        color: white;
+    }
+      
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+      
+    .banner-content i {
+      font-size: 1.5rem;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+      
+    .banner-content p {
+      font-weight: 500;
+    }
+      
+    .banner-link {
+      color: white;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+      
+    .banner-link:hover {
+      color: var(--light-color);
+    }
     .news-article {
       background-color: #1e1e1e;
-      padding: 20px;
+      padding: 40px;
+      padding-bottom:80px;
       border-radius: 8px;
       margin-bottom: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -97,14 +139,28 @@
     </nav>
   </header>
 
+  <div class="Top">
+    <img src="assets/banr.png" alt="banner" height="90px">
+  </div>
+  
+  <section class="banner-section">
+    <div class="container">
+      <div class="banner-content">
+        <i class="fa-solid fa-bullhorn"></i>
+        <p>Check out our latest game releases on the Games page!</p>
+        <a href="#" class="banner-link">Learn More</a>
+      </div>
+    </div>
+  </section>
+ 
   <div class="news-container">
     <div class="news-article">
-      <h2>🎮 New Game Release: Pixel Runners!</h2>
-      <p class="date">April 15, 2025</p>
-      <p>We're excited to announce our brand new platformer, Pixel Runners! Jump, dodge, and dash your way through neon-lit levels. Available now under the Games section!</p>
-    </div>
+      <h2>📺 Our Youtube Channel!</h2>
+      <p class="date">May 20, 2025</p>
+      <p>The Flipped Fish Youtube Channel (@flippedfishh) has been up and running even before this websites release, so go check out the channel and subscribe</p>
+  </div>
 
-    <div class="news-article">
+    <!-- <div class="news-article">
       <h2>🔥 Website Redesign Is Live</h2>
       <p class="date">April 10, 2025</p>
       <p>The Flipped Fish website just got a fresh new look! We've revamped the UI for smoother navigation and a darker, sleeker theme. Let us know what you think!</p>
@@ -114,7 +170,11 @@
       <h2>💡 Feature Polls Now Open</h2>
       <p class="date">April 5, 2025</p>
       <p>Want a say in what we build next? Head over to the community tab and vote in our latest poll. Your feedback helps shape the future of Flipped Fish.</p>
-    </div>
+    </div> -->
+  </div>
+  
+  <div class="Top">
+    <p>"news news image"</p>
   </div>
 
   <footer>
