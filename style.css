@@ -331,6 +331,7 @@ header img {
 
 .img-cont {
   background: url("./assets/illustration.webp") center/cover no-repeat;
+  background-size: contain;
   height: 100%;
   width: 100%;
   transition: transform 10s ease;

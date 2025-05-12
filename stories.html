@@ -3,84 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the captivating stories and books from Flipped Fish - Immerse yourself in our unique narrative universe" />
+  <meta name="keywords" content="Flipped Fish, stories, books, narrative, storytelling, game stories" />
+  <meta property="og:title" content="Stories - Flipped Fish" />
+  <meta property="og:description" content="Discover the captivating stories and books from Flipped Fish" />
+  <meta property="og:type" content="website" />
+  <title>Stories - Flipped Fish</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="assets/offf flipped fish.ico">
-  <link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
-  <title>Our Stories</title>
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #100115;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-
-    .header2 {
-      background-color: #100115;
-      color: #f5f5f5;
-      padding: 20px 40px;
-      text-align: center;
-    }
-
-    main {
-      padding: 40px;
+    .stories-container {
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    h1, h2 {
-      color: #ffffff;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .embed-container {
-      background-color: #100115;
-      border: 2px dashed #bbb;
-      padding: 60px;
+    .stories-header {
       text-align: center;
-      margin-top: 30px;
-      border-radius: 12px;
+      margin-bottom: 40px;
     }
 
-    .embed-container span {
-      color: #ccc;
-      font-style: italic;
+    .stories-header h1 {
+      font-family: "Bona Nova SC", serif;
+      font-size: 2.5rem;
+      color: var(--dark-text);
+      margin-bottom: 15px;
     }
 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+    .stories-header p {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .image-container img {
+    .story-section {
+      background-color: var(--card-bg);
+      padding: 40px;
+      border-radius: var(--border-radius);
+      margin-bottom: 30px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .story-section h2 {
+      font-family: "Prompt", sans-serif;
+      font-size: 1.8rem;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+
+    .story-section p {
+      line-height: 1.8;
+      color: var(--dark-text);
+      margin-bottom: 30px;
+    }
+
+    .story-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
       height: auto;
-      border-radius: 10px;
+      border-radius: var(--border-radius);
+      margin: 30px auto;
+      display: block;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #ffffff;
+    .story-image:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .stories-header h1 {
+        font-size: 2rem;
+      }
+
+      .story-section {
+        padding: 30px 20px;
+      }
+
+      .story-section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -93,38 +101,33 @@
     <nav>
       <div>
         <ul>
-          <li>
-            <a href="news.html">NEWS</a>
-          </li>
-          <li>
-            <a href="games.html">GAMES</a>
-          </li>
-          <li>
-            <a href="stories.html">STORIES</a>
-          </li>
-          <li>
-            <a href="about.html">ABOUT</a>
-          </li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="games.html">GAMES</a></li>
+          <li><a href="stories.html">STORIES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
         </ul>
       </div>
     </nav>
   </header>
-  
-  <div class="header2">
-    <h1>Our Stories</h1>
+
+  <div class="main">
+    <div class="stories-container">
+      <div class="stories-header">
+        <h1>Our Stories</h1>
+        <p>Immerse yourself in the captivating narratives that shape our games and creative universe</p>
+      </div>
+
+      <div class="story-section">
+        <h2>The SCIN Chronicles</h2>
+        <p>
+          The story of the SCIN follows three heroes—Cool Guy, Dynamic, and Simple—who are torn apart and sent into vastly different dimensions. Simple ends up in a vibrant, silly realm where he reconnects with forgotten memories and begins to question his origins. As he explores, he discovers clues about his past, including a mysterious goop tied to his creation and a figure named Cool Guy who once saved him. This sets the stage for a deeper mystery across the multiverse.
+        </p>
+        <img src="assets/scgncover.png" alt="SCIN Chronicles Cover" class="story-image">
+      </div>
+    </div>
   </div>
 
-
-  <main>
-    <h2>Our books</h2>
-    <p>
-        The story of the SCIN follows three heroes—Cool Guy, Dynamic, and Simple—who are torn apart and sent into vastly different dimensions. Simple ends up in a vibrant, silly realm where he reconnects with forgotten memories and begins to question his origins. As he explores, he discovers clues about his past, including a mysterious goop tied to his creation and a figure named Cool Guy who once saved him. This sets the stage for a deeper mystery across the multiverse.
-    </p>
-    <div class="image-container">
-      <img src="assets/scgncover.png" alt="scgn cover">
-    </div>
-  </main>
-    
   <footer>
     <div class="footerContainer">
       <div class="socialIcons">

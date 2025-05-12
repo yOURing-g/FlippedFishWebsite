@@ -1,64 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stay updated with the latest news, updates, and announcements from Flipped Fish - Your source for indie game development news" />
+  <meta name="keywords" content="Flipped Fish, game news, indie games, game updates, gaming news" />
+  <meta property="og:title" content="News - Flipped Fish" />
+  <meta property="og:description" content="Stay updated with the latest news and announcements from Flipped Fish" />
+  <meta property="og:type" content="website" />
+  <title>News - Flipped Fish</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="assets/offf flipped fish.ico">
-  <title>Flipped Fish - News</title>
-  <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #d8ca5a;
-      color: #ffffff;
+      font-family: 'Noto Sans', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
       margin: 0;
       padding: 0;
     }
-    /* header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ff6f61;
-    } */
-    .Top{
-      margin: 0;
-      height:90px;
-      font-size: 1.5em;
-      color: #000000;
-      background-color: rgb(64, 6, 83);
-      display:flex;
-      justify-content: center;
-    }
+    
     .news-container {
       max-width: 900px;
       margin: 30px auto;
       padding: 0 20px;
     }
-    .banner-section {
-        background-color: var(--primary-color);
-        padding: 15px 0;
-        color: white;
+    
+    .news-article {
+      background-color: var(--card-bg);
+      padding: 40px;
+      border-radius: var(--border-radius);
+      margin-bottom: 30px;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
     }
-      
+    
+    .news-article:hover {
+      transform: translateY(-5px);
+    }
+    
+    .news-article h2 {
+      color: var(--secondary-color);
+      margin-top: 0;
+      font-family: "Prompt", sans-serif;
+      font-size: 1.8rem;
+    }
+    
+    .news-article .date {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .news-article p {
+      line-height: 1.6;
+      color: var(--dark-text);
+    }
+    
+    .banner-section {
+      background-color: var(--primary-color);
+      padding: 15px 0;
+      color: var(--light-text);
+    }
+    
     .banner-content {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
+      padding: 0 20px;
     }
-      
+    
     .banner-content i {
       font-size: 1.5rem;
       animation: pulse 2s infinite;
@@ -69,51 +87,25 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
-      
+    
     .banner-content p {
       font-weight: 500;
+      margin: 0;
     }
-      
+    
     .banner-link {
-      color: white;
-      text-decoration: underline;
+      color: var(--accent-color);
+      text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
-      
+    
     .banner-link:hover {
-      color: var(--light-color);
-    }
-    .news-article {
-      background-color: #1e1e1e;
-      padding: 40px;
-      padding-bottom:80px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .news-article h2 {
-      color: #ffcc00;
-      margin-top: 0;
-    }
-    .news-article p.date {
-      font-size: 0.9em;
-      color: #888;
-    }
-    .news-article p {
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #1f1f1f;
-      color: #666;
-      font-size: 0.9em;
-      border-top: 1px solid #333;
+      color: var(--accent-light);
     }
   </style>
 </head>
 <body>
-
   <header class="header">
     <a href="index.html" class="logo-link">
       <img src="assets/flipped fish name2.png" alt="Flipped Fish" />
@@ -122,59 +114,32 @@
     <nav>
       <div>
         <ul>
-          <li>
-            <a href="news.html">NEWS</a>
-          </li>
-          <li>
-            <a href="games.html">GAMES</a>
-          </li>
-          <li>
-            <a href="stories.html">STORIES</a>
-          </li>
-          <li>
-            <a href="about.html">ABOUT</a>
-          </li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="games.html">GAMES</a></li>
+          <li><a href="stories.html">STORIES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <div class="Top">
-    <img src="assets/banr.png" alt="banner" height="90px">
-  </div>
-  
-  <section class="banner-section">
-    <div class="container">
+  <div class="main">
+    <section class="banner-section">
       <div class="banner-content">
         <i class="fa-solid fa-bullhorn"></i>
         <p>Check out our latest game releases on the Games page!</p>
-        <a href="#" class="banner-link">Learn More</a>
+        <a href="games.html" class="banner-link">Learn More</a>
+      </div>
+    </section>
+   
+    <div class="news-container">
+      <div class="news-article">
+        <h2>📺 Our Youtube Channel!</h2>
+        <p class="date">May 20, 2025</p>
+        <p>The Flipped Fish Youtube Channel (@flippedfishh) has been up and running even before this website's release, so go check out the channel and subscribe!</p>
       </div>
     </div>
-  </section>
- 
-  <div class="news-container">
-    <div class="news-article">
-      <h2>📺 Our Youtube Channel!</h2>
-      <p class="date">May 20, 2025</p>
-      <p>The Flipped Fish Youtube Channel (@flippedfishh) has been up and running even before this websites release, so go check out the channel and subscribe</p>
-  </div>
-
-    <!-- <div class="news-article">
-      <h2>🔥 Website Redesign Is Live</h2>
-      <p class="date">April 10, 2025</p>
-      <p>The Flipped Fish website just got a fresh new look! We've revamped the UI for smoother navigation and a darker, sleeker theme. Let us know what you think!</p>
-    </div>
-
-    <div class="news-article">
-      <h2>💡 Feature Polls Now Open</h2>
-      <p class="date">April 5, 2025</p>
-      <p>Want a say in what we build next? Head over to the community tab and vote in our latest poll. Your feedback helps shape the future of Flipped Fish.</p>
-    </div> -->
-  </div>
-  
-  <div class="Top">
-    <p>"news news image"</p>
   </div>
 
   <footer>
