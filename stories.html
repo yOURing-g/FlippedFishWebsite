@@ -354,18 +354,35 @@
       <img src="assets/flipped fish name2.png" alt="Flipped Fish" />
     </a>
 
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="menu-overlay"></div>
+
     <nav>
       <div>
         <ul>
-          <li><a href="news.html">NEWS</a></li>
-          <li><a href="games.html">GAMES</a></li>
-          <li><a href="stories.html">STORIES</a></li>
-          <li><a href="gallery.html">GALLERY</a></li>
-          <li><a href="about.html">ABOUT</a></li>
+          <li>
+            <a href="news.html">NEWS</a>
+          </li>
+          <li>
+            <a href="games.html">GAMES</a>
+          </li>
+          <li>
+            <a href="stories.html">STORIES</a>
+          </li>
+          <li>
+            <a href="gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="about.html">ABOUT</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
+
 
   <div class="main">
     <div class="stories-container">
@@ -460,25 +477,24 @@
       </div>
     </div>
   </footer>
-  
   <script>
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('.header nav');
     const menuOverlay = document.querySelector('.menu-overlay');
-    const body = document.body;
+    const menuLinks = document.querySelectorAll('.header nav a');
 
     function toggleMenu() {
       nav.classList.toggle('active');
       menuOverlay.classList.toggle('active');
-      body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
     }
 
     mobileMenuBtn.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
 
-    // Close menu when clicking a link
-    document.querySelectorAll('nav a').forEach(link => {
+    // Close menu when a link is clicked
+    menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (nav.classList.contains('active')) {
           toggleMenu();
@@ -486,7 +502,7 @@
       });
     });
 
-    // Close menu on window resize
+    // Close menu on window resize if open
     window.addEventListener('resize', () => {
       if (window.innerWidth > 992 && nav.classList.contains('active')) {
         toggleMenu();
